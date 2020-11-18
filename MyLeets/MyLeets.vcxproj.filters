@@ -22,6 +22,9 @@
     <Filter Include="MyLeets\8_Atoi2">
       <UniqueIdentifier>{069cd113-1e9a-4395-9133-5bf47290f782}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyLeets\10_isMatch">
+      <UniqueIdentifier>{e64b18bc-dbee-4a2d-815e-3a2f3d8a1818}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyLeets.cpp">
@@ -33,6 +36,9 @@
     <ClCompile Include="Atoi2.cpp">
       <Filter>MyLeets\8_Atoi2</Filter>
     </ClCompile>
+    <ClCompile Include="isMatch.cpp">
+      <Filter>MyLeets\10_isMatch</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Atoi.h">
@@ -40,6 +46,9 @@
     </ClInclude>
     <ClInclude Include="Atoi2.h">
       <Filter>MyLeets\8_Atoi2</Filter>
+    </ClInclude>
+    <ClInclude Include="isMatch.h">
+      <Filter>MyLeets\10_isMatch</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -153,11 +153,13 @@
   <ItemGroup>
     <ClCompile Include="Atoi.cpp" />
     <ClCompile Include="Atoi2.cpp" />
+    <ClCompile Include="isMatch.cpp" />
     <ClCompile Include="MyLeets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Atoi.h" />
     <ClInclude Include="Atoi2.h" />
+    <ClInclude Include="isMatch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

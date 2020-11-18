@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Atoi.h"
 #include "Atoi2.h"
+#include "isMatch.h"
 
 int main()
 {
@@ -16,7 +17,7 @@ int main()
 	//Atoi::myAtoi("-91283472332");
 	//Atoi::myAtoi("3.14159");
 
-	Atoi2::RegexDemos();
+	/*Atoi2::RegexDemos();
 	Atoi2::Intro();
 	Atoi2::myAtoi("42");
 	Atoi2::myAtoi("  -42");
@@ -25,6 +26,14 @@ int main()
 	Atoi2::myAtoi("-91283472332");
 	Atoi2::myAtoi("3.14159");
 	Atoi2::myAtoi("3.");
+	Atoi2::myAtoi("21474836460");*/
+
+	Match::isMatch("mississippi", "mis*is*p*.");
+	Match::isMatch("aa", "a");
+	Match::isMatch("aa", "a*");
+	Match::isMatch("ab", ".*");
+	Match::isMatch("aab", "c*a*b*");
+	
 
 }
 

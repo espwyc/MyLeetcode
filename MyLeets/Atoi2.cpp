@@ -1,5 +1,4 @@
 #include "Atoi2.h"
-#include <set>
 
 void Atoi2::RegexDemos()
 {
@@ -27,21 +26,56 @@ void Atoi2::RegexDemos()
 
 int Atoi2::myAtoi(string s)
 {
+	int rev = 0;
 	regex reg("[ ]*([+-]?[0-9]+).*");
 	smatch smres;
 
 	regex_match(s, smres, reg);
 
-	//cout <<s<<" :"<< smres[1] << endl;
-
-	//¶Ô
+	cout <<s<<" :"<< smres[1] << endl;
 
 	string nums = smres[1];
 	if (nums.size() != 0)
 	{
+		bool minusFlag = false;
+		for (char c : nums)
+		{
+			if (c == '+')
+			{
+				minusFlag = false;
+				continue;
+			}
+			if (c == '-')
+			{
+				minusFlag = true;
+				continue;
+			}
+			
+			if (!minusFlag&&c>='0'&&c<='9')
+			{
+				if (rev > INT32_MAX / 10 || (rev == INT32_MAX / 10 && (c - '0') > INT32_MAX % 10))
+				{
+					rev = INT32_MAX;
+					break;
+				}
+				rev = 10 * rev + (c - '0');
+			}
+			else if(minusFlag&&c >= '0'&&c <= '9')
+			{
+				rev = rev > 0 ? -rev : rev;
+				if (rev < INT32_MIN / 10 || (rev == INT32_MIN / 10 && ('0' - c) < INT32_MIN % 10))
+				{
+					rev = INT32_MIN;
+					break;
+				}		
+				rev = 10 * rev + ('0' - c);
+			}
+		}
+
 
 	}
 	else return 0;
 
-	return 0;
+	cout << rev << endl;
+	return rev;
 }
